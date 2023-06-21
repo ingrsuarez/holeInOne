@@ -1,0 +1,8 @@
+////FUENTES\\\\\\\\\\
+
+
+https://fonts.google.com/specimen/Poppins?preview.text=HiO%20DEV&preview.text_type=custom
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Dosis&display=swap" rel="stylesheet">
