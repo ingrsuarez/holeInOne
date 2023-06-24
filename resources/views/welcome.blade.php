@@ -56,10 +56,13 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                       </li>
                     </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    @auth
+                        <a href="{{ url('/home') }}" class="navbar-brand position-relative end-0">Home</a>
+                    @else
+                        <div class="text-center m-2">
+                        <a href="{{ route('login') }}" class="btn btn-primary">Log in</a>
+                        </div>
+                    @endauth
                   </div>
                 </div>
             </nav>
@@ -73,6 +76,8 @@
               <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active" style="max-height: 30rem;">
@@ -81,19 +86,19 @@
 
                 <div class="container">
                   <div class="carousel-caption text-start">
-                    <h1>Example headline.</h1>
+                    <h1>DATA ANALTYICS</h1>
                     <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    <p><a class="btn btn-lg btn-primary text-white" href="#">Sign up today</a></p>
                   </div>
                 </div>
               </div>
               <div class="carousel-item" style="max-height: 30rem;">
-                <img src="public/images/image-7.jpeg" class="img-fluid" alt="" width="100%" height="80%">
+                <img src="public/images/image-7.jpeg" class="img-fluid opacity-75 bg-dark" alt="" width="100%" height="80%">
                 <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Another example headline.</h1>
+                  <div class="carousel-caption text-dark text-start">
+                    <h1 class="">Another example headline.</h1>
                     <p>Some representative placeholder content for the second slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    <p><a class="btn btn-lg btn-primary text-white" href="#">Learn more</a></p>
                   </div>
                 </div>
               </div>
@@ -103,7 +108,7 @@
                   <div class="carousel-caption text-start">
                     <h1>One more for good measure.</h1>
                     <p>Some representative placeholder content for the third slide of this carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    <p><a class="btn btn-lg btn-primary text-white" href="#">Browse gallery</a></p>
                   </div>
                 </div>
               </div>
@@ -113,7 +118,27 @@
                   <div class="carousel-caption text-start">
                     <h1>One more for good measure.</h1>
                     <p>Some representative placeholder content for the third slide of this carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    <p><a class="btn btn-lg btn-primary text-white" href="#">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" style="max-height: 30rem;">
+                <img src="public/images/fondo2.jpg" class="img-fluid" alt="" width="100%" height="80%">
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>ENERGY</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary text-white" href="#">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" style="max-height: 30rem;">
+                <img src="public/images/fondo1.jpg" class="img-fluid" alt="" width="100%" height="80%">
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>ENERGY</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary text-white" href="#">Browse gallery</a></p>
                   </div>
                 </div>
               </div>
@@ -137,27 +162,30 @@
 
             <!-- Three columns of text below the carousel -->
             <div class="row">
-              <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#127"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
-
-                <h2>Heading</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-              </div><!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#721"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
-
-                <h2>Heading</h2>
-                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-              </div><!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-                <h2>Heading</h2>
-                <p>And lastly this, the third column of representative placeholder content.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-              </div><!-- /.col-lg-4 -->
+              <div class="card card bg-white mx-4" style="width: 18rem;">
+                  <img src="public/images/fondo1.jpg" class="card-img mt-2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              <div class="card card bg-white mx-4" style="width: 18rem;">
+                  <img src="public/images/image-8.jpeg" class="card-img mt-2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-secondary">Go somewhere</a>
+                  </div>
+                </div>
+              <div class="card bg-white mx-4" style="width: 18rem;">
+                  <img src="public/images/image-6.jpeg" class="card-img mt-2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-secondary">Go somewhere</a>
+                  </div>
+                </div>
             </div><!-- /.row -->
 
 
@@ -165,12 +193,12 @@
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
-              <div class="col-md-7">
+            <div class="row featurette rounded bg-white">
+              <div class="col-md-7 my-4">
                 <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
                 <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-5  my-4">
                 <img src="public/images/image-13.jpeg" class="img-fluid" alt="" width="100%">
                 
 
@@ -213,8 +241,9 @@
 
       <!-- FOOTER -->
         <footer class="container">
+            <img src="public/images/logo-1.png" class="img-fluid" width="100" height="94">
             <p class="float-end"><a href="#">Back to top</a></p>
-            <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p>&copy; Hole in One Software Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </footer>
     </main>
 
